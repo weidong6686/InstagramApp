@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o6u-0l-Clf">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="LGj-Nk-yef">
+            <objects>
+                <viewController storyboardIdentifier="Search" id="o6u-0l-Clf" customClass="SearchViewController" customModule="InstagramApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Cl-Gu-aR0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qgl-Lz-m3I">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewLayout key="collectionViewLayout" id="KFv-VC-jfI" customClass="CollectionLayout" customModule="InstagramApp" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ExploreCollectionViewCell" id="cbd-NZ-CYT" customClass="ExploreCollectionViewCell" customModule="InstagramApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Asy-7j-Ru0">
+                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="151"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Asy-7j-Ru0" firstAttribute="top" secondItem="cbd-NZ-CYT" secondAttribute="top" id="aJE-kb-OW5"/>
+                                            <constraint firstItem="Asy-7j-Ru0" firstAttribute="leading" secondItem="cbd-NZ-CYT" secondAttribute="leading" id="lKy-ro-nvO"/>
+                                            <constraint firstAttribute="trailing" secondItem="Asy-7j-Ru0" secondAttribute="trailing" id="wT6-Oe-Gc9"/>
+                                            <constraint firstAttribute="bottom" secondItem="Asy-7j-Ru0" secondAttribute="bottom" id="wgR-u6-zHn"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="exploreImage" destination="Asy-7j-Ru0" id="Mis-Z4-REQ"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qgl-Lz-m3I" firstAttribute="leading" secondItem="7GI-b2-OUS" secondAttribute="leading" id="eMD-nO-QfQ"/>
+                            <constraint firstItem="qgl-Lz-m3I" firstAttribute="top" secondItem="7GI-b2-OUS" secondAttribute="top" id="mNH-Tr-69X"/>
+                            <constraint firstItem="7GI-b2-OUS" firstAttribute="bottom" secondItem="qgl-Lz-m3I" secondAttribute="bottom" id="pt6-bT-9qw"/>
+                            <constraint firstItem="7GI-b2-OUS" firstAttribute="trailing" secondItem="qgl-Lz-m3I" secondAttribute="trailing" id="tVL-EF-Jgh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7GI-b2-OUS"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="qgl-Lz-m3I" id="bUU-lu-5Gg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O9f-db-3s5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-95.200000000000003" y="69.715142428785612"/>
+        </scene>
+    </scenes>
+</document>

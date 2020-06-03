@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xaK-qt-6x9">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Activity View Controller-->
+        <scene sceneID="wZ3-tr-2Ru">
+            <objects>
+                <viewController storyboardIdentifier="Activity" id="xaK-qt-6x9" customClass="ActivityViewController" customModule="InstagramApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dd7-5V-wRE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPy-pQ-6l4" customClass="CustomSegmentedControl" customModule="InstagramApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="8Ha-vV-lfW"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5L2-T6-Rxq">
+                                <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dPy-pQ-6l4" firstAttribute="trailing" secondItem="p32-jT-6Pv" secondAttribute="trailing" id="RWE-Mq-UYP"/>
+                            <constraint firstItem="p32-jT-6Pv" firstAttribute="bottom" secondItem="5L2-T6-Rxq" secondAttribute="bottom" id="X0L-0m-U2E"/>
+                            <constraint firstItem="dPy-pQ-6l4" firstAttribute="top" secondItem="p32-jT-6Pv" secondAttribute="top" id="ZZo-Ng-TMy"/>
+                            <constraint firstItem="dPy-pQ-6l4" firstAttribute="leading" secondItem="p32-jT-6Pv" secondAttribute="leading" id="efc-Ph-Eol"/>
+                            <constraint firstItem="5L2-T6-Rxq" firstAttribute="leading" secondItem="p32-jT-6Pv" secondAttribute="leading" id="iSQ-Yp-Kv2"/>
+                            <constraint firstItem="p32-jT-6Pv" firstAttribute="trailing" secondItem="5L2-T6-Rxq" secondAttribute="trailing" id="kNF-7f-mao"/>
+                            <constraint firstItem="5L2-T6-Rxq" firstAttribute="top" secondItem="dPy-pQ-6l4" secondAttribute="bottom" id="sdC-Zx-KPR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="p32-jT-6Pv"/>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="5L2-T6-Rxq" id="KWY-Fl-xC7"/>
+                        <outlet property="segmentedControl" destination="dPy-pQ-6l4" id="vlA-eD-vt4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LPk-RH-fRM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-60" y="68.815592203898049"/>
+        </scene>
+    </scenes>
+</document>
